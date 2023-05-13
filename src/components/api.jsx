@@ -1,17 +1,14 @@
+const ROOT_URL = 'https://api.exchangerate.host/'
 export function getSymbols() {
-  return fetch('https://api.exchangerate.host/symbols')
+  return fetch(`${ROOT_URL}symbols`)
     .then((res) => res.json())
     .then((result) => {
       return Object.values(result.symbols)
     })
 }
 
-export function getResult({ valueFrom, valueTo, sum }) {
+export function getResult({ valueFrom, valueTo, sum, date }) {
   return fetch(
-    `https://api.exchangerate.host/convert?from=${valueFrom}&to=${valueTo}&amount=${sum}&places=2`
-  )
-    .then((res) => res.json())
-    .then((result) => {
-      return result
-    })
+    `${ROOT_URL}convert?from=${valueFrom}&to=${valueTo}&amount=${sum}&places=2&date=${date}`
+  ).then((res) => res.json())
 }
