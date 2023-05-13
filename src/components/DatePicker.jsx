@@ -13,7 +13,7 @@ function DatePicker({ date, getDate }) {
         onChange={([date]) => {
           getDate(date)
         }}
-      ></Flatpickr>
+      />
     </div>
   )
 }

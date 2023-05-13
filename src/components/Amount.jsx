@@ -4,7 +4,7 @@ function Amount({ sum, getSum }) {
   }
 
   return (
-    <div>
+    <div className="inputBlock">
       <label htmlFor="amount">Amount</label>
       <input
         value={sum}

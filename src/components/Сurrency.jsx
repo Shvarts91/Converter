@@ -15,7 +15,7 @@ const Currency = ({ value, inputName, getValue, currencies }) => {
     return <div>Загрузка...</div>
   } else {
     return (
-      <div>
+      <div className="selectBlock">
         <label htmlFor={inputName}>{inputName}</label>
         <select id={inputName} value={value} onChange={onSelectedChange}>
           {currencies.map((item) => (
