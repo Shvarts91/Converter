@@ -12,7 +12,7 @@ const Currency = ({ value, inputName, getValue, currencies }) => {
   }, [currencies])
 
   if (isLoaded) {
-    return <div>Загрузка...</div>
+    return <div>Loading...</div>
   } else {
     return (
       <div className="selectBlock">

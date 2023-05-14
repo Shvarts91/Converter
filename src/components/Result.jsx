@@ -1,11 +1,11 @@
 import React from 'react'
-import '../App.css'
+import '../styles/app.css'
 import Amount from './Amount'
 import Currency from './Сurrency'
 import DatePicker from './DatePicker'
 import { useState, useEffect } from 'react'
-import { getResult } from './api'
-import { getSymbols } from './api'
+import { getResult } from '../api/api'
+import { getSymbols } from '../api/api'
 
 function Result() {
   const [finResult, setFinResult] = useState({})
@@ -14,8 +14,6 @@ function Result() {
   const [valueTo, setValueTo] = useState('USD')
   const [currencies, setCurrencies] = useState([])
   const [date, setDate] = useState(new Date())
-
-  // console.log(new Date())
 
   const getSum = (result) => {
     setSum(result)
@@ -30,7 +28,6 @@ function Result() {
   }
 
   const getDate = (result) => {
-    console.log(result)
     setDate(result)
   }
 

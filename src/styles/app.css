@@ -65,6 +65,8 @@ button {
   background-size: 30px 30px;
   border: none;
   width: 130px;
+  background: #fff url('../assets/calendar.svg') center right no-repeat;
+  background-size: 30px 30px;
 }
 .headerBlock {
   display: flex;

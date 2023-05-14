@@ -2,8 +2,6 @@ import 'flatpickr/dist/themes/dark.css'
 import Flatpickr from 'react-flatpickr'
 
 function DatePicker({ date, getDate }) {
-  console.log(date)
-
   return (
     <div>
       <Flatpickr

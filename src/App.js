@@ -1,4 +1,4 @@
-import './App.css'
+import './styles/app.css'
 
 import Result from './components/Result'
 
