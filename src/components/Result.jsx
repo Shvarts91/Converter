@@ -57,7 +57,7 @@ function Result() {
     <div>
       <form onSubmit={onSubmitHandler}>
         <div className="headerBlock">
-          <h1>Curency converter</h1>
+          <h1>Currency converter</h1>
           <DatePicker date={date} getDate={getDate} />
         </div>
         <div className="bodyForm">
