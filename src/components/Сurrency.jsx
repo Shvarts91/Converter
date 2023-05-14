@@ -1,31 +1,24 @@
 import React, { useEffect, useState } from 'react'
 
-const Currency = ({ inputName, getValue, data }) => {
-  const [selected, setSelected] = useState()
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [items, setItems] = useState([])
+const Currency = ({ value, inputName, getValue, currencies }) => {
+  const [isLoaded, setIsLoaded] = useState(true)
 
   const onSelectedChange = (e) => {
-    setSelected(e.target.value)
     getValue(e.target.value)
-    console.log(e.target.value)
   }
 
   useEffect(() => {
-    setIsLoaded(true)
-
-    setItems(data)
     setIsLoaded(false)
-  }, [data])
+  }, [currencies])
 
   if (isLoaded) {
-    return <div>Загрузка...</div>
+    return <div>Loading...</div>
   } else {
     return (
-      <div>
+      <div className="selectBlock">
         <label htmlFor={inputName}>{inputName}</label>
-        <select id={inputName} value={selected} onChange={onSelectedChange}>
-          {items.map((item) => (
+        <select id={inputName} value={value} onChange={onSelectedChange}>
+          {currencies.map((item) => (
             <option value={item.code} key={`${inputName}-${item.code}`}>
               {item.code} ({item.description})
             </option>

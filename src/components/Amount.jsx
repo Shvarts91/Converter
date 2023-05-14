@@ -1,18 +1,13 @@
-import React, { useState } from 'react'
-
-function Amount({ getSum }) {
-  const [number, setNumber] = useState('')
-
+function Amount({ sum, getSum }) {
   const onNumberChange = (e) => {
-    setNumber(e.target.value)
     getSum(e.target.value)
   }
 
   return (
-    <div>
+    <div className="inputBlock">
       <label htmlFor="amount">Amount</label>
       <input
-        value={number}
+        value={sum}
         onChange={onNumberChange}
         type="number"
         placeholder="Enter value"
